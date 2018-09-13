@@ -1,0 +1,11 @@
+<div class="container">
+
+  <h1>Add a new flat</h1>
+
+  <%= simple_form_for([@flat, @review]) do |f| %>
+    <%= f.input :content  %>
+    <%= f.input :rating, collection: (1..5)  %>
+    <%= f.submit 'Add review '  %>
+  <% end %>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @flat.name%></h1>
+  <%= @flat.description %>
+  <%= @flat.address %>
+  <%= @flat.price_per_night %>
+  <%= @flat.number_of_guests %>
+  <%= link_to 'Add a review', new_flat_review_path(@flat)  %>
+  <%= link_to "Edit", edit_flat_path(@flat) %>
+
+  <%= @flat.reviews.each do |review| %>
+    <p><%= review.content %></p>
+    <p><%= review.rating %></p>
+  <% end %>
+</div>
